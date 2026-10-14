@@ -301,6 +301,50 @@ h3 {
   vertical-align: middle;
 }
 
+/* ── Expandable abstracts ── */
+.paper-abstract { margin: 2px 0 6px; font-size: 0.86rem; }
+
+.paper-abstract summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  list-style: none;
+  color: var(--navy);
+  user-select: none;
+}
+
+.paper-abstract summary::-webkit-details-marker { display: none; }
+
+.paper-abstract summary::before {
+  content: "+";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  line-height: 13px;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: bold;
+  border: 1px solid var(--navy);
+  border-radius: 2px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.paper-abstract[open] summary::before { content: "\2212"; }
+
+.paper-abstract summary:hover { color: var(--link-hover); }
+.paper-abstract summary:hover::before { background: var(--navy); color: #fff; }
+.paper-abstract summary:focus-visible { outline: 2px solid var(--navy); outline-offset: 2px; }
+
+.paper-abstract p {
+  margin-top: 6px;
+  padding: 8px 14px;
+  border-left: 3px solid var(--border);
+  background: var(--light);
+  color: var(--text);
+  line-height: 1.6;
+}
+
 /* ── Teaching ── */
 .course-block {
   margin-bottom: 22px;

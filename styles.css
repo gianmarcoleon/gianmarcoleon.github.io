@@ -181,6 +181,7 @@ h3 {
 .news-badge.grant  { background: #7b4f00; }
 .news-badge.appt   { background: #1a3a5c; }
 .news-badge.media  { background: #5a2d82; }
+.news-badge.wp     { background: #8a3b12; }
 
 .news-date {
   flex-shrink: 0;
